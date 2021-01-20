@@ -39,9 +39,17 @@ class ProductListItem extends React.Component{
 
                 <div className="row product__select_block">
                     <div className="col-xs-256">
-                        <div className="select_color">
-                            <p>Цвет</p>
-                            <div></div>
+                        <div className="row select_menu">
+                            <div className="select_color">
+                                <p>Цвет</p>
+                                <div></div>
+                            </div>
+                            <div className="row select_volume">
+                                <div className="filter_wrapper">
+                                    <input type="checkbox" id="select_volume_100" />
+                                    <label htmlFor="select_volume_100">100 ml</label>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
