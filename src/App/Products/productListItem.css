@@ -1,0 +1,108 @@
+.product{
+    background: #F8FAFC;
+    margin-top: 35px;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    padding: 31px;
+
+}
+
+.product__header{
+    justify-content: space-between;
+}
+.product__header_status{
+    background: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.product__header_status p{
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+
+.product__header_img img{
+    width: 256px;
+    border-radius: 25px;
+    
+}
+.product__header_libra{
+    width: 46px;
+    height: 46px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    display: block;
+    position: relative;
+}
+.product__header_libra_img{
+    width: 16px;
+    height: 16px;
+    background-image: url(../../common/style/images/Vector.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-8px, -8px);
+}
+
+/* product info */
+
+.product__info__block{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product__info_title{
+    color: #2c2c2c;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+}
+
+.product__info_description{
+    font-family: 'SF UI Display Light';
+    line-height: 24px;
+    font-size: 16px;
+    color: #2c2c2c;
+}
+
+/* select block */
+
+.product__select_block{
+    justify-content: space-between;
+}
+.select_color{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.select_color p{
+    font-size: 12px;
+}
+.select_color div{
+    width: 7px;
+    height: 7px;
+    border-bottom: 1px solid #2c2c2c;
+    border-right: 1px solid #2c2c2c;
+    transform: rotate(45deg);
+
+}
+.price{
+    font-family: 'SF UI Display Bold';
+    font-size: 18px;
+    line-height: 21px;
+}

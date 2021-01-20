@@ -1,0 +1,163 @@
+@font-face{
+    font-family: 'SF UI Display Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Display Bold'), url(../style/sf-ui-display-cufonfonts-webfont/sf-ui-display-bold-58646a511e3d9.woff) format('woff');
+}
+
+
+@font-face {
+    font-family: 'SF UI Display Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Display Light'), url(../style/sf-ui-display-cufonfonts-webfont/sf-ui-display-light-58646b33e0551.woff) format('woff');
+    }
+
+@font-face {
+    font-family: 'SF UI Display Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Display Medium'), url(../style/sf-ui-display-cufonfonts-webfont/sf-ui-display-medium-58646be638f96.woff) format('woff');
+}
+
+
+* {
+	box-sizing: border-box;
+}
+body{
+    font-family: 'SF UI Display Medium';
+}
+
+/* @font-face{
+    font-family: SF UI Display;
+    src: url(../../font/sf-ui-display-cufonfonts/sf-ui-display-medium-58646be638f96.otf);
+} */
+
+.container{
+    width: 100%;
+    max-width: 2054px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+     /* margin-left: -15px;
+     margin-right: -15px; */
+
+}
+ /* .col{
+     margin-right: 17.5px;
+     margin-left: 17.5px;
+     margin-bottom: 35px;
+ } */
+
+
+
+
+.col-xs-12{
+    width: 100%;
+}
+.col-xs-4{
+    width: 573px;
+}
+.col-xs-256{
+    width: 258px;
+}
+.col-xs-92{
+    width: 92px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* tablet */
+@media(min-width:768px){
+.col-sm-12{
+    width: 100%;
+}
+.col-sm-4{
+    width: 33.33333%;
+}
+.col-sm-5{
+    width: 41.66666%;
+}
+.col-sm-6{
+    width: 50%;
+}
+.col-sm-8{
+    width: 66.666666%;
+}
+
+.col-sm-45{
+    width: 44.94875%;
+}
+.col-sm-55{
+    width: 55.05125%;
+}
+}
+
+
+
+
+
+
+
+/* laptop */
+@media(min-width:992px){
+.col-md-12{
+    width: 100%;
+}
+.col-md-7{
+    width: 58.333333%;
+}
+
+.col-md-6{
+    width: 50%;
+}
+.col-md-45{
+    width: 44.94875%;
+}
+.col-md-55{
+    width: 55.05125%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* desktop */
+@media(min-width:1200px){
+.col-lg-12{
+    width: 100%;
+}
+.col-lg-7{
+    width: 58.333333%;
+}
+.col-lg-5{
+    width: 41.6666666%;
+}
+.col-lg-4{
+    width: 573px;
+}
+
+
+}
