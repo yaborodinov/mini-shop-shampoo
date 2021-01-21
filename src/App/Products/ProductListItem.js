@@ -1,18 +1,29 @@
 import React, { useState } from "react";
-import InnerImageZoom from 'react-inner-image-zoom'
+import InnerImageZoom from 'react-inner-image-zoom';
 
 import "./productListItem.css"
 import image from "./products_img/image2.png"
 
 
 
-function ProductListItem(){
+function ProductListItem() {
+    
     const [{ x, y, z}, setX] = useState(false);
 
     const soldCheckbox = ({ target: { checked } }) => {
-        console.log(x, checked);
+        // console.log(x, checked);
         setX(checked);
     };
+
+    const [count, setCount] = useState(1);
+
+    const [price, setPrice] = useState(0);
+    
+ 
+   
+    
+    
+    
     
         return (
             <div className="col-xs-4 product">
@@ -50,8 +61,6 @@ function ProductListItem(){
                     <p className="product__info_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
 
-               
-                
 
                 <div className="row product__select_block">
                     <div className="col-xs-256">
@@ -63,17 +72,36 @@ function ProductListItem(){
                             <div className="row select_volume">
                                 
                                 <div className="filter_wrapper">
-                                    <input type="checkbox" checked={x}  onChange={soldCheckbox}  />
+                                    <input type="checkbox" checked={x} onChange={soldCheckbox} onClick={(e) => {
+                                        if (e.target.checked === true) {
+                                            setPrice(price + 100)
+
+                                        } else if (e.target.checked === false) {
+                                            setPrice(price - 100)
+                                        }
+                                    }} />
                                     <label  onChange={soldCheckbox}>100 ml</label>
                                 </div>
 
                                 <div className="filter_wrapper">
-                                    <input type="checkbox" checked={y} onChange={soldCheckbox} />
+                                    <input type="checkbox" checked={y} onChange={soldCheckbox} onClick={(e) => {
+                                        if (e.target.checked === true) {
+                                            setPrice(price + 200)
+                                        } else if (e.target.checked === false) {
+                                            setPrice(price - 200)
+                                        }
+                                    }}/>
                                     <label onChange={soldCheckbox}>200 ml</label>
                                 </div>
 
                                 <div className="filter_wrapper">
-                                    <input type="checkbox" checked={z} onChange={soldCheckbox} />
+                                    <input type="checkbox" checked={z} onChange={soldCheckbox} onClick={(e) => {
+                                        if (e.target.checked === true) {
+                                            setPrice(price+300)
+                                        } else if (e.target.checked === false) {
+                                            setPrice(price - 300)
+                                        }
+                                    }}/>
                                     <label onChange={soldCheckbox}>300 ml</label>
                                 </div>
                             </div>
@@ -81,7 +109,7 @@ function ProductListItem(){
 
                     </div>
                     <div className="col-xs-92">
-                        <p className="price">200 грн</p>
+                        <p className="price">{price} грн</p>
                     </div>
                 </div>
 
@@ -89,11 +117,21 @@ function ProductListItem(){
                     <div className="col-xs-92 product__counter">
                         <div className="row product__counter_row">
                             <div className="decrement_btn">
-                                <div className="decrement_btn__inner"></div>
+                                <div className="decrement_btn__inner" onClick={() => {
+                                    if (count >= 1 && count !== 1) {
+                                        setCount(count - 1)
+                                    
+                                    }
+
+                                }}
+                                ></div>
                             </div>
-                            <p>1</p>
+                            <p>{count}</p>
                             <div className="increment_btn">
-                                <div className="increment_btn__inner"></div>
+                                <div className="increment_btn__inner" onClick={() => {
+                                     setCount(count + 1)
+                                
+                                }}></div>
                             </div>
                         </div>
                     </div>
