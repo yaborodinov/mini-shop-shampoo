@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import InnerImageZoom from 'react-inner-image-zoom'
 
 import "./productListItem.css"
+import image from "./products_img/image2.png"
 
 
 
@@ -24,7 +26,8 @@ function ProductListItem(){
                     </div>
 
                     <div className="product__header_img">
-                        <img src="http://dummyimage.com/256x251/a6a6ff" alt=""/>
+                        <InnerImageZoom src={image} alt="shampoo" />
+
                          
                     </div>
 
@@ -46,6 +49,9 @@ function ProductListItem(){
                     </h2>
                     <p className="product__info_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 </div>
+
+               
+                
 
                 <div className="row product__select_block">
                     <div className="col-xs-256">
