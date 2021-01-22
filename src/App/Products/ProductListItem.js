@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import InnerImageZoom from 'react-inner-image-zoom';
 
+
+
 import "./productListItem.css"
+
 // import image from "./products_img/image2.png"
+
+import { Container } from "semantic-ui-react";
+
+import Colors from "./Colors";
 
 
 
@@ -14,6 +21,7 @@ function ProductListItem({
     name,
     description,
     image,
+    children
 }) {
     
     const [{ x, y, z}, setX] = useState(false);
@@ -28,6 +36,11 @@ function ProductListItem({
     const [price, setPrice] = useState(0);
     
 
+    <Container >
+        {children}
+    </Container>
+
+    
     
     
     
@@ -72,10 +85,12 @@ function ProductListItem({
                 <div className="row product__select_block">
                     <div className="col-xs-256">
                         <div className="row select_menu">
+                            
                             <div className="select_color">
-                                <p>Цвет</p>
-                                <div></div>
+                                <Colors />
                             </div>
+                            
+
                             <div className="row select_volume">
                                 
                                 <div className="filter_wrapper">
@@ -133,7 +148,7 @@ function ProductListItem({
                                 >
                                 <div className="decrement_btn__inner" ></div>
                             </div>
-                            <p>{count}</p>
+                            <div className="count">{count }</div>
                             <div className="increment_btn" onClick={() => {
                                 setCount(count + 1)
 
@@ -149,6 +164,7 @@ function ProductListItem({
                         </div>
                     </div>
                 </div>
+                
             </div>
         )
     }

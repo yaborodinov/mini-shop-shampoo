@@ -5,14 +5,14 @@ const productsData = [
     {
         id: 1,
         name: "MOROCCANOIL",
-        description: "Moroccanoil Treatment is the original award-winning hair product that created the worldwide buzz on Argan oil and pioneered oil-infused hair care. ...",
+        description: "Moroccanoil Treatment is the original award-winning hair product that created the worldwide buzz on Argan oil and pioneered oil-infused hair care. ",
         image: MOROCCANOIL,
     
     },
     {
         id: 2,
         name: "PANTENE",
-        description: "Pantene Hair Fall Control Shampoo strengthens your hair from root to tip. Contains Pro-Vitamin formula that goes beyond cleansing to leave hair stronger",
+        description: "Pantene Hair Fall Control Shampoo strengthens your hair from root to tip.Pro-Vitamin formula that goes beyond cleansing to leave hair stronger",
         image: PANTENE,
 
     },

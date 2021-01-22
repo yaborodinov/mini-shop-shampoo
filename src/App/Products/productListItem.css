@@ -107,30 +107,48 @@
 }
 .select_color{
     width: 100%;
-    background-color: #fff;
-    border-radius: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
     margin-bottom: 18.3px;
-    cursor: pointer;
+    border-radius: 30px;
+ 
 
 }
-.select_color p{
+.select_color>.ui.fluid.dropdown{
+    border-radius: 15px;
+    border-color: transparent;
+}
+.select_color>.ui.selection.dropdown:hover{
+    border-color: transparent;
+}
+.select_color>.ui.dropdown:not(.button)>.default.text{
+    color: #2c2c2c;
     font-size: 12px;
+    padding-left: 10px;
 }
-.select_color div{
-    width: 7px;
-    height: 7px;
-    border-bottom: 1px solid #2c2c2c;
-    border-right: 1px solid #2c2c2c;
-    transform: rotate(45deg);
-    
+.select_color>.ui.selection.active.dropdown{
+    border-color: transparent;
+}
+.select_color>.ui.selection.dropdown:focus{
+    border-color: transparent;
+}
 
+.select_color>.ui.selection.active.dropdown .menu{
+    border-radius: 0 0 15px 15px;
+    border-color: transparent;
+    box-shadow: none;
 }
+
+.select_color>.ui.dropdown .menu>.item:hover{
+    background: #F3F8FC;
+    border-radius: 0px 10px 10px 0px;   
+}
+.select_color>.ui.dropdown .menu .selected.item, .ui.dropdown.selected{
+    background: #F3F8FC;
+    border-radius: 0px 10px 10px 0px;
+    font-family: 'SF UI Display Light';
+    
+}
+
+
 .price{
     font-family: 'SF UI Display Bold';
     font-size: 18px;
@@ -194,6 +212,7 @@
     background: #E2E9F0;
     border-radius: 30px;
     margin-left: 10px;
+    display: flex;
 }
 .product__counter:hover{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -202,10 +221,13 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.product__counter_row p{
+
+.count{
     padding-top: 8px;
     padding-bottom: 8px;
+    margin: 0;
 }
+
 .decrement_btn, .increment_btn{
     width: 21px;
     height: 21px;
@@ -240,10 +262,11 @@
     display: flex;
     background: linear-gradient(261.65deg, #EFBB37 -3.95%, #CF9E1F 109.44%);
     border-radius: 30px;
-    padding: 9px 0;
+    padding: 5px 0;
     justify-content: center;
     cursor: pointer;
 }
+
 .buy_btn:hover{
     box-shadow: 0px 0px 20px #E8CB80;
     background: linear-gradient(261.65deg, #E9B32C -3.95%, #BF911A 109.44%);
@@ -256,6 +279,7 @@
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
+    display: block;
 }
 
 
