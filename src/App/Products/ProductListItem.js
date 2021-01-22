@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import InnerImageZoom from 'react-inner-image-zoom';
 
 import "./productListItem.css"
-import image from "./products_img/image2.png"
+// import image from "./products_img/image2.png"
 
 
 
-function ProductListItem() {
+
+
+
+function ProductListItem({
+    id,
+    name,
+    description,
+    image,
+}) {
     
     const [{ x, y, z}, setX] = useState(false);
 
@@ -19,8 +27,8 @@ function ProductListItem() {
 
     const [price, setPrice] = useState(0);
     
- 
-   
+
+    
     
     
     
@@ -35,7 +43,6 @@ function ProductListItem() {
                             
                         </div>
                     </div>
-
                     <div className="product__header_img">
                         <InnerImageZoom src={image} alt="shampoo" />
 
@@ -56,9 +63,9 @@ function ProductListItem() {
 
                 <div className="row product__info__block">
                     <h2 className="product__info_title">
-                        Шампунь
+                        {name}
                     </h2>
-                    <p className="product__info_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <p className="product__info_description">{description }</p>
                 </div>
 
 
@@ -116,22 +123,22 @@ function ProductListItem() {
                 <div className="row product__order_block">
                     <div className="col-xs-92 product__counter">
                         <div className="row product__counter_row">
-                            <div className="decrement_btn">
-                                <div className="decrement_btn__inner" onClick={() => {
-                                    if (count >= 1 && count !== 1) {
-                                        setCount(count - 1)
-                                    
-                                    }
+                            <div className="decrement_btn" onClick={() => {
+                                if (count >= 1 && count !== 1) {
+                                    setCount(count - 1)
 
-                                }}
-                                ></div>
+                                }
+
+                            }}
+                                >
+                                <div className="decrement_btn__inner" ></div>
                             </div>
                             <p>{count}</p>
-                            <div className="increment_btn">
-                                <div className="increment_btn__inner" onClick={() => {
-                                     setCount(count + 1)
-                                
-                                }}></div>
+                            <div className="increment_btn" onClick={() => {
+                                setCount(count + 1)
+
+                            }}>
+                                <div className="increment_btn__inner" ></div>
                             </div>
                         </div>
                     </div>
