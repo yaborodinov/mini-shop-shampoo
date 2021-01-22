@@ -7,7 +7,7 @@ import { Dropdown } from 'semantic-ui-react'
 
 const Colors = [
     {
-        key: 'red',
+        key: 'yellow',
         text: 'Желтый',
         value: 'red',
         
@@ -27,12 +27,7 @@ const Colors = [
         text: 'Белый',
         value: 'white',
     },
-    // {
-    //     key: 'Justen Kitsune',
-    //     text: 'Justen Kitsune',
-    //     value: 'Justen Kitsune',
-    //     image: { avatar: true, src: 'https://react.semantic-ui.com/images/avatar/small/justen.jpg' },
-    // },
+    
 ]
 
 const DropdownSelection = () => (

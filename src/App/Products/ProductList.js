@@ -30,8 +30,7 @@ class Product extends React.Component{
                     ))
                 }
                 
-                {/* <ProductListItem />
-                <ProductListItem /> */}
+                
 
                 
             </div>
